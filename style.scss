@@ -1,0 +1,63 @@
+/*
+Theme Name:  Template Base
+Description: Descripción del sitio
+Version: 1.0
+Author: Enrique Contreras
+Author URI: http://kikemonk.com/
+*/
+
+/* ======= ALINEACIONES ======= */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display: block;
+}
+
+/*======= MEDIA QUERIES =======*/
+
+/* == iPad Horizontal == */
+@media (max-width: 1024px){
+
+}
+
+/* == iPad Vertical == */
+@media (max-width:768px){
+
+}
+
+/* == iPhone 6s Plus == */
+@media (max-width:414px){
+
+}
+
+/* == Smartphone == */
+@media (max-width:360px){
+
+}
