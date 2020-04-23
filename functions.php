@@ -19,34 +19,6 @@
 	    add_filter('widget_text', 'do_shortcode', 11);
 	}
 
-	// make TinyMCE allow iframes
-	add_filter('tiny_mce_before_init', create_function( '$a',
-	'$a["extended_valid_elements"] = "iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]"; return $a;') );
-
-	add_filter('mce_buttons','wysiwyg_editor');
-	function wysiwyg_editor($mce_buttons) {
-	    $pos = array_search('wp_more',$mce_buttons,true);
-	    if ($pos !== false) {
-	        $tmp_buttons = array_slice($mce_buttons, 0, $pos+1);
-	        $tmp_buttons[] = 'wp_page';
-	        $mce_buttons = array_merge($tmp_buttons, array_slice($mce_buttons, $pos+1));
-	    }
-	    return $mce_buttons;
-	}
-
-	function mqw_mas_botones($buttons) {
-	 $buttons[] = 'hr';
-	 $buttons[] = 'del';
-	 $buttons[] = 'sub';
-	 $buttons[] = 'sup';
-	 $buttons[] = 'fontselect';
-	 $buttons[] = 'fontsizeselect';
-	 $buttons[] = 'cleanup';
-	 $buttons[] = 'styleselect';
-	 return $buttons;
-	}
-	add_filter("mce_buttons_3", "mqw_mas_botones");
-
 	//Añadir columna de IDs
 	add_filter('manage_posts_columns', 'posts_columns_id', 5);
 	add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);
@@ -73,25 +45,27 @@
 		// Bootstrap
 		wp_register_script( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", array( 'jquery' ), '1.0', true );
 		//Popper
-		wp_register_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://unpkg.com/popper.js/dist/umd/popper.min.js" );
+		wp_register_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://unpkg.com/popper.js/dist/umd/popper.min.js", true );
 		//GSAP TweenMax
-		wp_register_script( "gsap-tm-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" );
+		wp_register_script( "gsap-tm-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js", true );
 		//Scroll Magic
-		wp_register_script( "scrollmagic-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/g/scrollmagic@2.0.5(ScrollMagic.min.js+plugins/animation.gsap.min.js+plugins/animation.velocity.min.js+plugins/debug.addIndicators.min.js+plugins/jquery.ScrollMagic.min.js)" );
+		wp_register_script( "scrollmagic-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/g/scrollmagic@2.0.5(ScrollMagic.min.js+plugins/animation.gsap.min.js+plugins/animation.velocity.min.js+plugins/debug.addIndicators.min.js+plugins/jquery.ScrollMagic.min.js)", true );
+		//Main
+		wp_register_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', true );
 		//CSS
 		//Bootstrap
-		wp_register_style( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" );
+		wp_register_style( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", true );
 		
 		//Animate
-		wp_register_style( 'animate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" );
+		wp_register_style( 'animate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", true );
 		//Font Awesome
-		wp_register_style( "font-awesome", get_template_directory_uri() . '/assets/css/fontawesome.min.css' );
+		wp_register_style( "font-awesome", get_template_directory_uri() . '/assets/css/fontawesome.min.css', true );
 		//Font Awesome All
-		wp_register_style( "font-awesome-all", get_template_directory_uri() . '/assets/css/all.min.css' );
+		wp_register_style( "font-awesome-all", get_template_directory_uri() . '/assets/css/all.min.css', true );
 		// Para usar ajax
 		/*
-		$php_array = array( 'admin_ajax' => admin_url( 'admin-ajax.php' ) );
-	 	wp_localize_script( $scriptenelqueusamosajax, 'php_array', $php_array );
+		$admin_scripts = array( 'ajax' => admin_url( 'admin-ajax.php' ) );
+	 	wp_localize_script( $scriptenelqueusamosajax, 'admin_scripts', $admin_scripts );
 	 	*/
 	}
 
@@ -102,15 +76,21 @@
 		wp_enqueue_script('prefixfree');
 		wp_enqueue_script('popper');
 		wp_enqueue_script('bootstrap');
-		wp_enqueue_script('animate');
-		wp_enqueue_script('gsap-tm-cdn');
-		wp_enqueue_script('scrollmagic-cdn');
+		// wp_enqueue_script('gsap-tm-cdn');
+		// wp_enqueue_script('scrollmagic-cdn');
+		wp_enqueue_script('main');
 		// CSS
 		wp_enqueue_style('bootstrap');
 		wp_enqueue_style('animate');
 		wp_enqueue_style('font-awesome');
 		wp_enqueue_style('font-awesome-all');
 	}
+
+	// Cambiar largo del excerpt
+	function new_excerpt_length($length) {
+		return 140;
+	}
+	add_filter('excerpt_length', 'new_excerpt_length');
 
 	/* Opcionales
   	
@@ -136,7 +116,6 @@
 	}
 	add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
-
 	// Usar ajax
 	add_action( 'wp_ajax_$nombrecall', '$nombrecall_init' );
 	add_action( 'wp_ajax_nopriv_$nombrecall', '$nombrecall_init' );
@@ -145,25 +124,11 @@
 
 	}
 
-	// Modificar Login css
-	function my_login_stylesheet() {
-	    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/assets/css/style-login.css' );
-	}
-	add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
-
-
 	//Añadir google analytics
 	add_action('wp_footer', 'add_googleanalytics');
 	function add_googleanalytics() { ?>
 	// Paste your Google Analytics code from Step 6 here
 	<?php }
-
-	// Cambiar largo del excerpt
-	function new_excerpt_length($length) {
-	return 100;
-	}
-	add_filter('excerpt_length', 'new_excerpt_length');
-
 
 	// Añadir soporte para posrt formats
 	add_theme_support( 'post-formats', array( 'chat', 'audio', 'video', 'status', 'quote', 'link', 'gallery', 'aside' ) );
