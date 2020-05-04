@@ -4,7 +4,7 @@
 	if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 	function my_jquery_enqueue() {
 	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.3.1.min.js", false, null);
+	   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.3.1.min.js", '', '', false);
 	   wp_enqueue_script('jquery');
 	}
 
@@ -45,11 +45,11 @@
 		// Bootstrap
 		wp_register_script( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", array( 'jquery' ), '1.0', true );
 		//Popper
-		wp_register_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://unpkg.com/popper.js/dist/umd/popper.min.js", true );
+		wp_register_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://unpkg.com/popper.js/dist/umd/popper.min.js", '', '', true );
 		//GSAP TweenMax
-		wp_register_script( "gsap-tm-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js", true );
+		wp_register_script( "gsap-tm-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js", '', '', true );
 		//Scroll Magic
-		wp_register_script( "scrollmagic-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/g/scrollmagic@2.0.5(ScrollMagic.min.js+plugins/animation.gsap.min.js+plugins/animation.velocity.min.js+plugins/debug.addIndicators.min.js+plugins/jquery.ScrollMagic.min.js)", true );
+		wp_register_script( "scrollmagic-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/g/scrollmagic@2.0.5(ScrollMagic.min.js+plugins/animation.gsap.min.js+plugins/animation.velocity.min.js+plugins/debug.addIndicators.min.js+plugins/jquery.ScrollMagic.min.js)", '', '', true );
 		//Main
 		wp_register_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', true );
 		//CSS
