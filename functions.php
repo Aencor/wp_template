@@ -46,8 +46,8 @@
 		//Prefixfree 
 		wp_enqueue_script( 'prefixfree', get_template_directory_uri() . '/assets/js/prefixfree.min.js', array(), '1.0', true );
 		// Bootstrap
-		wp_enqueue_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js", array(), '1.14.7', true );
-		wp_enqueue_script( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", array(), '4.3.1', true );
+		wp_enqueue_script( "popper", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.14.7', true );
+		wp_enqueue_script( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js", array(), '4.3.1', true );
 		//GSAP TweenMax
 		wp_enqueue_script( "gsap-tm-cdn", "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . ":////cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js", array(), '3.3.4', true );
 		//Theme Custom Script
@@ -58,7 +58,7 @@
 		====================== */
 
 		//Bootstrap
-		wp_enqueue_style( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", true );
+		wp_enqueue_style( 'bootstrap', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", true );
 		//Animate
 		wp_enqueue_style( 'animate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css", true );
 		//Font Awesome
