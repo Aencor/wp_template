@@ -1,19 +1,28 @@
-Template para crear temas de Wordpress
+**WORDPRESS CUSTOM THEME BOILERPLATE**
 
-En estos archivos podrás encontrar una forma sencilla de hacer un template de WordPress.
+This WP Theme Boilerplate works for beginning a new WP Site from scratch with some tools that you may find useful 
 
-Poco a poco lo iré puliendo para que sea más sencillo de entender y de utilizar pero al menos de inicio es una buena herramienta para los que desean empezar a desarrollar temas.
+On the Plugins side you´ll find :
 
-El template ya viene con la integración de jQuery, Bootstrap y algunos scripts que están mas o menos de moda ahora como el inview.js o el animate.css.
+**ACF PRO** https://www.advancedcustomfields.com/pro/
+**WP ALL IN ONE MIGRATION WITH EXTENSIONS**
+**W3 TOTAL CACHE**
+**WEBP EXPRESS**
+**CONTACT FORM 7**
+**YOAST SEO**
+**DUPLICATE POST**
+**WORDFENCE**
+**UNDER CONSTRUCTION PAGE**
 
-De igual forma ya trae los scripts necesarios para la compatibilidad de sus sitios con navegadores viejos como IE8 aunque usen media queries o algunos elementos de CSS3.
+I´ve included some Libraries that I find very useful 
 
-También incluye la librería prefixfree que les permitirá utilizar CSS3 de una forma mucho más sencilla.
+**BOOTSTRAP**
+**GSAP** https://greensock.com/gsap/
+**FONT AWESOME** https://fontawesome.com/
+**ANIMATE CSS**
 
-En el functions.php encontrarán pre cargado el soporte de thumbnails, menús y de sidebars así como del uso de shortcodes en widgets.
+Hope you´ll find it usefull and if you want to support me you can buy me a drink here https://www.paypal.me/porakita
 
-También trae algunas modificaciones del editor TinyMCE default y poco a poco iré agregando más cosas que me parezcan útiles.
+If you want to know more you can email me at kiketani@kikemonk.com or fine me on twitter as @kikemonk
 
-Tiene todas las secciones básicas para hacer el template ya con los loops y todo incluído
-
-Si tienen dudas o desean colaborar pueden contactarme en kiketani@kikemonk.com
+Cheers!!
