@@ -1,13 +1,16 @@
-@charset "UTF-8";
 /*
-Theme Name:  Template Base
-Description: Descripción del sitio
-Version: 1.0
+Theme Name:  Base Monk Theme
+Description: Default WP Boilerplate for Theme Development
+Version: 2.0
 Author: Enrique Contreras
 Author URI: http://kikemonk.com/
-
 */
-/* ======= ALINEACIONES ======= */
+/* ======= ALIGNMENT CLASSES ======= */
+.full {
+  width: 100%;
+  float: left;
+  clear: both; }
+
 .alignleft {
   display: inline;
   float: left;
@@ -30,16 +33,31 @@ Author URI: http://kikemonk.com/
 .show {
   display: block; }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+@media (max-width: 414px) {
+  .desktop {
+    display: none; } }
+
+.mobile {
+  display: none; }
+  @media (max-width: 414px) {
+    .mobile {
+      display: block; } }
+
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
-
-/*======= MEDIA QUERIES =======*/
-/* == iPad Horizontal == */
-/* == iPad Vertical == */
-/* == iPhone 6s Plus == */
-/* == Smartphone == */
+/*# sourceMappingURL=style.css.map */

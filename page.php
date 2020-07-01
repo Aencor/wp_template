@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-	<!-- Inicio Loop -->
-	<?php while(have_posts()) : the_post(); ?>
+	<!-- Begin Loop -->
+	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-	<?php endwhile; ?>
-	<!-- Final loop -->
+	<?php endwhile; endif;?>
+	<!-- End loop -->
 <?php get_footer(); ?>
