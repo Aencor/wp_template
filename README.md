@@ -1,13 +1,13 @@
 
 **WORDPRESS CUSTOM THEME BOILERPLATE**
 
-This WP Theme Boilerplate works for beginning a new WP Site from scratch with some tools that you may find useful
+This WP Theme Boilerplate works for starting a new WP Site from scratch with some tools that you may find useful
 
 On the Plugins side you'll find :
 
 **ACF PRO**  [https://www.advancedcustomfields.com/pro/](https://www.advancedcustomfields.com/pro/) 
- **WP ALL IN ONE MIGRATION WITH EXTENSIONS**  
- **W3 TOTAL CACHE**  
+**WP ALL IN ONE MIGRATION WITH EXTENSIONS**  
+**W3 TOTAL CACHE**  
  **WEBP EXPRESS**  
  **CONTACT FORM 7**  
  **YOAST SEO**  
