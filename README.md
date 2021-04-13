@@ -14,6 +14,12 @@ On the Plugins side you'll find :
  **DUPLICATE POST**  
  **WORDFENCE**  
  **UNDER CONSTRUCTION PAGE**
+ 
+ Now the theme Supports ACF Update with LOCAL JSON, very useful when working on Local Environments and then uploading to staging, just hve to sync changes once you upload your files.
+ 
+ The functions have been completely rewritten in order to allow you to find more easily the functions you need.
+ 
+ The SCSS folder have been also updated to be more organized, and let you expand your CSS with ease.
 
 I've included some Libraries that I find very useful
 
