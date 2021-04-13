@@ -1,0 +1,259 @@
+/*
+ * Nylon CSS Partial 
+ * Typography: Setting up global font-related properties for all the elements
+*/
+
+a {
+    text-decoration: none;
+    color: $primary3;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    &:active {
+        color: $primary2;
+    }
+}
+
+body {
+    font-family: $font-family-body;
+    font-size: 18px;
+}
+
+b,
+strong {
+    font-weight: $weight-bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    color: $body1;
+    margin: 30px 0;
+    padding: 10px 0 0 40px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-left: none;
+    .byline {
+        font-size: 16px;
+        font-weight: $weight-light;
+        display: block;
+    }
+}
+
+p.lead {
+    @include make-lead;
+}
+
+// .fabric-icon {
+//   color: $brand-tertiary;
+//   font-size: 26px;
+//   display: inline-block;
+//   vertical-align: middle;
+// }
+.content-styled {
+    a {
+        color: $primary3;
+        @include transition();
+        &:hover {
+            color: $primary6;
+            text-decoration: none;
+        }
+        &:active {
+            color: $primary1;
+            text-decoration: none;
+        }
+    }
+    ul {
+        list-style-type: circle;
+        margin-left: 1em;
+        li {
+            margin: 1em 0;
+        }
+    }
+    ol {
+        counter-reset: item;
+        padding: 0;
+        li {
+            counter-increment: item;
+            list-style: none inside;
+            line-height: 30px;
+            margin: 1em 0;
+            padding-left: 50px;
+            position: relative;
+            &:before {
+                color: $primary3;
+                content: "" counter(item) "";
+                display: inline-block;
+                left: 20px;
+                position: absolute;
+                text-align: center;
+            }
+        }
+    }
+    hr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        height: 1px;
+        background-color: $primary1;
+    }
+    img {
+        &.alignleft {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        &.alignright {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        &.aligncenter {
+            clear: both;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+    +.btn,
+    +p {
+        margin-top: 20px;
+    }
+    ul {
+        display: block;
+        list-style: none;
+        margin-bottom: 0;
+        li {
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 1rem;
+                width: 1rem;
+                background-image: url('../img/svg/ul-arrow.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+p {
+    font-family: $font-family-body;
+    font-weight: $font-weight-normal;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $body1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    color: $body1;
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-family: $font-family-headline;
+    font-weight: $weight-lightest;
+    font-size: 1.875rem;
+    line-height: 1em;
+    @include media(tablet) {
+        font-size: 3.3rem;
+        line-height: 1em;
+    }
+    @include media(desktop) {
+        font-size: 3.3rem;
+        line-height: 1em;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+    font-weight: $weight-light;
+    @include media(tablet) {
+        font-size: 2rem;
+        line-height: 1em;
+    }
+    @include media(desktop) {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+    }
+}
+
+h3 {
+    font-size: 1.313rem;
+    line-height: 1.333em;
+    font-weight: $weight-normal;
+    @include media(tablet) {
+        font-size: 1.8rem;
+        line-height: 1.25em;
+    }
+    @include media(desktop) {
+        font-size: 2.4rem;
+        line-height: 2.3rem;
+    }
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.333em;
+    font-weight: $weight-semibold;
+    @include media(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.333em;
+    }
+    @include media(desktop) {
+        font-size: 1.6rem;
+        line-height: 1em;
+    }
+}
+
+h5 {
+    font-size: 1.1rem;
+    line-height: 1.333em;
+    font-weight: $weight-semibold;
+    @include media(desktop) {
+        font-size: 1.05;
+        line-height: 1.333em;
+    }
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.333em;
+    font-weight: $weight-bold;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-dark {
+    color: $body1;
+}
+
+.small {
+    font-size: 16px;
+}
+
+ol {
+    li {
+        &:before {
+            font-weight: 500;
+        }
+    }
+}

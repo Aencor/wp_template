@@ -1,0 +1,224 @@
+{
+    "key": "group_6073c092d748a",
+    "title": "Global Block Settings",
+    "fields": [
+        {
+            "key": "field_6073c0d34fcf7",
+            "label": "Column Size",
+            "name": "column_size",
+            "type": "select",
+            "instructions": "Select a col size",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "11": "11",
+                "12": "12"
+            },
+            "default_value": [
+                12
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 1,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6073c1144fcf8",
+            "label": "Block Background",
+            "name": "block_background",
+            "type": "select",
+            "instructions": "Select the type of Block Background",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "color": "Color",
+                "image": "Image"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6073c1384fcf9",
+            "label": "Block Background Color",
+            "name": "block_background_color",
+            "type": "select",
+            "instructions": "Select the color for the Block Background, refer to Style Guide to check the color :",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6073c1144fcf8",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#072A53": "$primary1",
+                "#0069B4": "$primary2",
+                "#00ACEB": "$primary3",
+                "#006037": "$primary4",
+                "#00A557": "$primary5",
+                "#F9752E": "$primary6",
+                "#FFC630": "$primary7",
+                "#494949": "$body1",
+                "#FFF": "$white;",
+                "#B4DBFF": "$secondary1",
+                "#D7EFFD": "$secondary2",
+                "#EBF8FF": "$secondary3",
+                "linear-gradient(317.43deg, #072A53 -5.18%, #0069B4 117.05%)": "$darkGradient",
+                "linear-gradient(292.55deg, $primary1 19.39%, $primary2 48.42%, $primary3 85.33%)": "$darkBlueGradient",
+                "linear-gradient(296.12deg, $primary2 16.85%, $primary3 83.55%)": "$blueGradient",
+                "linear-gradient(282.57deg, $secondary2 10.83%, $secondary3 90.44%)": "$lightBlueGradient",
+                "linear-gradient(296.12deg, $primary4 16.45%, $primary5 83.55%)": "$greenGradient",
+                "linear-gradient(295.03deg, $primary6 19.1%, $primary7 84.08%)": "$orangeGradient"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6073c2dc4fcfa",
+            "label": "Block Background Image",
+            "name": "block_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6073c1144fcf8",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6073c40d4fcfb",
+            "label": "Content",
+            "name": "content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6073c41d4fcfc",
+            "label": "Padding Y Top",
+            "name": "padding_y_top",
+            "type": "text",
+            "instructions": "Set the Padding Y of the Block in px, rem or em",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_607485d249c80",
+            "label": "Padding Y Bottom",
+            "name": "padding_y_bottom",
+            "type": "text",
+            "instructions": "Set the Padding Y of the Block in px, rem or em",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1618249311
+}

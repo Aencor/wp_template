@@ -1,0 +1,40 @@
+//
+// Mixin
+//
+
+@mixin clearfix() {
+	clear:both;
+	zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin make-lead {
+    font-size: 1.125em;
+    font-weight: $weight-light;
+    line-height: 1.333em;
+    
+    @include media(tablet) {
+        font-size: 1.313em;
+        line-height: 1.429em;
+    }
+    @include media(desktop) {
+        font-size: 1.313em;
+        line-height: 1.429em;
+    }
+}
+
+@mixin transition($transition: .3s ease-out) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition: $transition;
+    }
+
+    transition: $transition;
+}
+
+@mixin make-inverse() {
+  p, li, h1, h2, h3, h4, h5, h6, blockquote {
+    color: $white;
+  }
+}

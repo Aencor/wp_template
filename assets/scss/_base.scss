@@ -1,0 +1,56 @@
+//
+// Variables
+//
+/////////////////////////////////
+// Colors
+$white: #fff;
+$black: #000;
+$primary1: #072A53;
+$primary2: #0069B4;
+$primary3: #00ACEB;
+$primary4: #006037;
+$primary5: #00A557;
+$primary6: #F9752E;
+$primary7: #FFC630;
+$body1: #494949;
+$body2: #fff;
+$secondary1: #B4DBFF;
+$secondary2: #D7EFFD;
+$secondary3: #EBF8FF;
+// Friendly Names
+$night: #072A53;
+$trueBlue: #0069B4;
+$maya: #00ACEB;
+$pine: #006037;
+$grass: #00A557;
+$saifron: #F9752E;
+$sunflower: #FFC630;
+$charcoal: #494949;
+$white: #fff;
+$skyBlue: #B4DBFF;
+$iceBlue: #D7EFFD;
+$mistBlue: #EBF8FF;
+
+$twitter: #1ca1f2;
+$linkedin: #0077b5;
+/////////////////////////////////
+// Gradients
+$darkGradient: linear-gradient(317.43deg, #072A53 -5.18%, #0069B4 117.05%);
+$darkBlueGradient: linear-gradient(292.55deg, $primary1 19.39%, $primary2 48.42%, $primary3 85.33%);
+$blueGradient: linear-gradient(296.12deg, $primary2 16.85%, $primary3 83.55%);
+$lightBlueGradient: linear-gradient(282.57deg, $secondary2 10.83%, $secondary3 90.44%);
+$greenGradient: linear-gradient(296.12deg, $primary4 16.45%, $primary5 83.55%);
+$orangeGradient: linear-gradient(295.03deg, $primary6 19.1%, $primary7 84.08%);
+// Typography
+$font-family-body: 'Source Sans Pro',
+sans-serif;
+$font-family-headline: $font-family-body;
+// Font Weights
+$weight-black: 900;
+$weight-bold: 700;
+$weight-semibold: 600;
+$weight-normal: 400;
+$weight-light: 300;
+$weight-lightest: 200;
+$border-color: red;
+$font-weight-normal: 400;

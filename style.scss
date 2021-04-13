@@ -6,74 +6,27 @@ Author: Enrique Contreras
 Author URI: http://kikemonk.com/
 */
 
-@import 'assets/css/_base';
+@import 'assets/scss/base';
+// Utilities
+@import 'assets/scss/utilities/utility-classes';
+@import 'assets/scss/utilities/mixins';
+@import 'assets/scss/utilities/responsive';
 
-/* ======= ALIGNMENT CLASSES ======= */
+@import 'assets/scss/base/font-import';
+@import 'assets/scss/base/grid';
+@import 'assets/scss/base/reset';
+@import 'assets/scss/base/typography';
 
-.full {
-    width: 100%;
-    float: left;
-    clear: both;
-}
+// Global
+@import 'assets/scss/global/header';
+@import 'assets/scss/global/footer';
 
-.alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.625em;
-}
+// Elements
+@import 'assets/scss/elements/buttons';
+@import 'assets/scss/elements/forms';
+@import 'assets/scss/elements/menus';
 
-.alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.625em;
-}
+// Blocks
+@import 'assets/scss/blocks/normal-content';
 
-.aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.hide {
-    display: none;
-}
-
-.show {
-    display: block;
-}
-
-.desktop {
-    @media(max-width: 414px) {
-        display: none;
-    }
-}
-
-.mobile {
-    display: none;
-    @media(max-width: 414px) {
-        display: block;
-    }
-}
-
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
